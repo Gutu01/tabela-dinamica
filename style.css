@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    color: #000;
+    background-color: #fcfcfc;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem .8rem;
+    gap: 1.5rem;
+}
+
+section{
+    padding:    1rem;
+    background-color: #fff;
+    border: .5px solid #8c8c8c;
+    border-radius: 16px;
+    width: 50%;
+}
+
+#filters{   
+    & form{
+
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: .5rem;
+        align-items: center;
+
+        & input{
+            width: 100%;
+            padding: 4px 12px;
+            border: 1px solid #e3e3e3;
+            
+            /* Item focado/destacado com borda ao clicar*/
+            &:focus{
+                outline: 2px solid #3489d3;
+            }
+        }
+
+        & button{
+            padding: 2 4px;
+            background-color: #fff;
+            border: .5px solid #8c8c8c;
+            border-radius: 4px;
+            transition: ease-in-out .2s;
+
+            &:hover{
+                background-color: #3489d3;
+                border: .5px solid #fff;
+                cursor:pointer;
+            }
+
+            & > img{
+                width: 10px;
+                height: 10px;
+            }
+        }
+    }
+}
+
+
+#list{
+    & table{
+        border-collapse: collapse;
+        width:100%;
+        & thead{
+            background-color: #3489d3;
+        }
+        & th{
+            padding: 4px 8px;
+        }
+        & tbody{
+            & td{
+                padding: 4px 8px;
+                border: 1px solid #c8c8c8;
+                font-style: 12px;
+
+                & img{
+                    width:100%;
+                    height: 100%;
+                    
+                }
+            }
+            & tr:nth-child(2n){
+                background-color: #c8c0c0;
+            }
+        }
+     }
+}
